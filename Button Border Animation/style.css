@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+}
+
+html,
+body {
+    min-height: 100vh;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    background: #f2f2f2;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+button span {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes rotateLine {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+button::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 15px;
+    width: 55%;
+    background: seagreen;
+    transform-origin: left center;
+    animation: rotateLine 1.5s
+        linear infinite;
+}
+button::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #f2f2f2;
+}
