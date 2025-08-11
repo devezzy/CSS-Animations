@@ -1,0 +1,48 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    font-family: cascadia code;
+}
+
+.wrapper {
+    position: relative;
+}
+
+#text {
+    background: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    border: 1.5px solid black;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    width: 300px;
+    border-radius: 5px;
+    transition: 0.2s ease;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    padding: 5px;
+    color: #4d4c4c;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+#text:focus~label {
+    transform: translateY(-130%);
+    left: 1.5%;
+    font-size: 15px;
+    background: white;
+}
+
+#text:focus {
+    border-color: slateblue;
+}
